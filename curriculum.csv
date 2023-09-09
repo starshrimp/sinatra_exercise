@@ -1,0 +1,6 @@
+number,lesson,description
+1,"Welcome, Numbers, Strings","This lesson is all about explaining what Ruby Monstas is and getting you ready to learn to program! We'll also look into our first basic Ruby topics: IRB, Numbers, Strings and Methods!"
+2,"Setting up, Variables","In this lesson we learn about the workflow to use while programming. And we take a look at some more basic Ruby topics: Variables, puts and gets."
+3,"Arrays","In this lesson we learn about our first collection type, Arrays, which are really just lists of things."
+4,"String Interpolation, Hashes","In this lesson we learn about a different collection type: Hashes."
+5,"Control Structures","Here's where it gets really interesting: Control Structures allow us to change the order in which things are done in our program."

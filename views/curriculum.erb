@@ -1,0 +1,17 @@
+<h1> This is a header </h1>
+<%= @current_time %>
+
+<% if @curriculum_items.nil? %>
+  <p>No curriculum items available</p>
+<% else %>
+  <% @curriculum_items.each do |item| %>
+    <ul>
+      <a href="/curriculum/<%= item.lesson_id %>">  
+        <li>Lesson ID: <%= item.lesson_id %>, <%= item.lesson_name %>, <%= item.description %></li>
+      </a>
+    </ul>
+  <% end %>
+<% end %>
+
+
+ 
