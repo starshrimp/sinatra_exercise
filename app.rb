@@ -26,28 +26,26 @@ end
 
 get '/curriculum' do
   parse_csv
-  p @curriculum_items
-
   @current_time = Time.now
   erb :curriculum
 end
 
 get '/curriculum/:lesson' do
+  parse_csv
   lesson_id = params['lesson']
   p "Lesson: #{lesson_id}"
-
   # Find the curriculum item with the matching lesson_id
-  curriculum_item = @curriculum_items.find { |item| item.lesson_id == lesson_id }
-
+  curriculum_item = nil
+  @curriculum_items.each do |item|
+    if item.lesson_id == lesson_id
+      p "Found curriculum item: #{item}"
+      curriculum_item = item
+      break  # Exit the loop as soon as a match is found
+    end
+  end
   if curriculum_item
-    erb :curriculum_item, locals: { curriculum_item: curriculum_item }
+    erb :curriculum_subpage, locals: { curriculum_item: curriculum_item }
   else
     "Curriculum item not found"
   end
-end
-
-
-
-get '/curriculum/:lesson' do
-  "Curriculum lesson: #{params['lesson']}!"
 end

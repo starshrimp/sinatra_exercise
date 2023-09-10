@@ -1,4 +1,4 @@
-<h1> This is a header </h1>
+<h1>Ruby Monstas Curriculum </h1>
 <%= @current_time %>
 
 <% if @curriculum_items.nil? %>
@@ -7,7 +7,7 @@
   <% @curriculum_items.each do |item| %>
     <ul>
       <a href="/curriculum/<%= item.lesson_id %>">  
-        <li>Lesson ID: <%= item.lesson_id %>, <%= item.lesson_name %>, <%= item.description %></li>
+        <li>Lesson ID: <%= item.lesson_id %>, <%= item.lesson_name %></li>
       </a>
     </ul>
   <% end %>
